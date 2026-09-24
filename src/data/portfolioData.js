@@ -334,39 +334,3 @@ export const projectFilterCategories = [
   "Full Stack",
   "Frontend"
 ];
-
-export const services = [
-  {
-    title: "Full-Stack Web Applications",
-    description: "Modern web applications using React, Node.js, Express and MongoDB."
-  },
-  {
-    title: "Business Applications",
-    description: "Custom dashboards, management systems and internal tools."
-  },
-  {
-    title: "E-commerce Applications",
-    description: "Product catalogs, carts, checkout and order management."
-  },
-  {
-    title: "Admin Dashboards",
-    description: "Analytics dashboards with authentication and role-based access."
-  },
-  {
-    title: "REST APIs",
-    description: "Secure and scalable backend APIs."
-  },
-  {
-    title: "AI-Powered Applications",
-    description: "AI integrations using APIs such as OpenAI."
-  },
-  {
-    title: "Authentication Systems",
-    description: "JWT authentication, protected routes and role-based access."
-  },
-  {
-    title: "Responsive Websites",
-    description: "Mobile-first responsive interfaces."
-  }
-];
-
