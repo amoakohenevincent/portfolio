@@ -37,6 +37,15 @@ jobs:
             dist/index.html
           sed -i 's#"/images/#"/portfolio/images/#g' dist/assets/*.js
           cp dist/index.html dist/404.html
+          for route in \
+            projects \
+            projects/library-management-system \
+            projects/tasty-queen-restaurant \
+            404
+          do
+            mkdir -p "dist/$route"
+            cp dist/index.html "dist/$route/index.html"
+          done
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
