@@ -36,6 +36,7 @@ jobs:
             -e 's#content="/images/#content="/portfolio/images/#g' \
             dist/index.html
           sed -i 's#"/images/#"/portfolio/images/#g' dist/assets/*.js
+          sed -i 's#An,{children:#An,{basename:`/portfolio`,children:#' dist/assets/*.js
           cp dist/index.html dist/404.html
           for route in \
             projects \
