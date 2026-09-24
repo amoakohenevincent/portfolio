@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
 import {
   ArrowLeft,
   ExternalLink,
@@ -30,6 +30,7 @@ function DetailSection({ title, children }) {
 
 export default function ProjectDetailPage() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const project = projects.find((p) => p.id === id);
 
   useEffect(() => {
@@ -43,17 +44,25 @@ export default function ProjectDetailPage() {
     return <Navigate to="/404" replace />;
   }
 
+  const handleBackToProjects = () => {
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <main className="pb-24 pt-28 md:pt-36">
       <div className="container-x">
         {/* Back Link */}
-        <Link
-          to="/#projects"
+        <button
+          type="button"
+          onClick={handleBackToProjects}
           className="mb-8 inline-flex items-center gap-2 text-sm text-text-secondary transition-colors hover:text-text-primary"
         >
           <ArrowLeft size={16} />
           <span>Back to projects</span>
-        </Link>
+        </button>
 
         {/* Project Header */}
         <div className="max-w-3xl">
