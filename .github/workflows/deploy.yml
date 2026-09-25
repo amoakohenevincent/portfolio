@@ -30,13 +30,10 @@ jobs:
           mkdir -p dist
           cp -R public/. dist/
           sed -i \
-            -e 's#="/favicon.svg"#="/portfolio/favicon.svg"#g' \
-            -e 's#src="/assets/#src="/portfolio/assets/#g' \
-            -e 's#href="/assets/#href="/portfolio/assets/#g' \
-            -e 's#content="/images/#content="/portfolio/images/#g' \
+            -e 's#canonical" href="https://amoakohenevincent.github.io/portfolio/"#canonical" href="https://vince.is-a.dev/"#g' \
+            -e 's#content="https://amoakohenevincent.github.io/portfolio/"#content="https://vince.is-a.dev/"#g' \
             dist/index.html
-          sed -i 's#"/images/#"/portfolio/images/#g' dist/assets/*.js
-          sed -i 's#An,{children:#An,{basename:`/portfolio`,children:#' dist/assets/*.js
+          sed -i 's#An,{children:#An,{basename:`/`,children:#' dist/assets/*.js
           cp dist/index.html dist/404.html
           for route in \
             projects \
