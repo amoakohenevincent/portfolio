@@ -1,0 +1,4 @@
+Contact: mailto:amoakohenevincent4148@gmail.com
+Expires: 2027-09-25T00:00:00.000Z
+Canonical: https://vince.is-a.dev/.well-known/security.txt
+Preferred-Languages: en
