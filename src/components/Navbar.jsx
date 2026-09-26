@@ -62,7 +62,7 @@ export default function Navbar() {
           className="group flex items-center gap-1 text-lg font-bold tracking-tight text-text-primary transition-colors"
         >
           <span>Vince</span>
-          <span className="text-accent transition-transform duration-200 group-hover:scale-110">.dev</span>
+          <span className="text-blue-500 transition-transform duration-200 group-hover:scale-110">.dev</span>
         </Link>
 
         {/* Desktop Nav Items */}
